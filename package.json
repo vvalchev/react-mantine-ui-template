@@ -1,0 +1,36 @@
+{
+  "name": "maleevi",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome lint ./src",
+    "format": "biome format ./src --write",
+    "check": "biome check ./src",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mantine/core": "^7.13.0",
+    "@mantine/hooks": "^7.13.0",
+    "@tabler/icons-react": "^3.17.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.2",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react-swc": "^3.5.0",
+    "postcss-preset-mantine": "^1.17.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1",
+    "vite-plugin-biome": "^1.0.12",
+    "vite-plugin-svgr": "^4.2.0"
+  }
+}
