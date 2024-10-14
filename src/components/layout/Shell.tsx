@@ -1,25 +1,25 @@
-import { AppShell, Burger, Center, NavLink, ScrollArea, useMantineColorScheme } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { AppShell, NavLink, ScrollArea, useMantineColorScheme } from "@mantine/core";
 import { IconDashboard, IconLogout, IconPalette, IconSettings } from "@tabler/icons-react";
 import { Outlet, NavLink as RNavLink } from "react-router-dom";
+
 import Logo from "@/assets/logo.svg?react";
 
-export default function Layout() {
-  const [opened, { toggle }] = useDisclosure();
+import classes from "./Shell.module.css";
+
+export default function Shell() {
   const { toggleColorScheme } = useMantineColorScheme();
 
   return (
-    <AppShell>
-      <AppShell.Header>
-        <Burger opened={opened} onClick={toggle} hiddenFrom="sm" size="sm" />
-      </AppShell.Header>
+    <AppShell
+      className={classes.shell}
+      navbar={{
+        width: 48,
+        breakpoint: "none",
+      }}
+    >
+      <AppShell.Navbar className={classes.navbar}>
+        <Logo className={classes.logo} />
 
-      <AppShell.Navbar p="md">
-        <AppShell.Section>
-          <Center>
-            <Logo />
-          </Center>
-        </AppShell.Section>
         <AppShell.Section grow component={ScrollArea}>
           <NavLink to="/" label={<IconDashboard />} component={RNavLink} />
         </AppShell.Section>

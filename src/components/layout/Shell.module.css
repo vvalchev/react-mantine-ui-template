@@ -1,0 +1,12 @@
+.shell {
+  padding: var(--mantine-spacing-md);
+
+  .navbar {
+    align-items: center;
+  }
+
+  .logo {
+    margin: var(--mantine-spacing-md);
+    object-fit: contain;
+  }
+}
